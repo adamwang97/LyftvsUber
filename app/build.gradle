@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '24.0.3'
+    defaultConfig {
+        applicationId "adam.doggo"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services:9.6.1'
+    compile 'com.lyft:lyft-android-sdk:1.0.0'
+    compile 'com.uber.sdk:rides-android:0.5.4'
+    compile 'com.android.support:support-v4:23.4.0'
+}
